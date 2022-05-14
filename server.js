@@ -33,6 +33,9 @@ app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
+app.get('/',function(req,res){
+    res.send("<p>We have two pokemons id 25 and 666: /api/pokemon/:id</p>");
+})
 
 
 app.get('/api/pokemon/:id', function (req, res) {
