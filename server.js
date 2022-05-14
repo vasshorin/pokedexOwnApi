@@ -23,10 +23,16 @@ const typeModel = mongoose.model("types", pokeSch);
 
 
 
-app.listen(5003, function (err) {
-    if (err)
-        console.log(err);
-})
+// app.listen(5004, function (err) {
+//     if (err)
+//         console.log(err);
+// })
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
+
 
 
 app.get('/api/pokemon/:id', function (req, res) {
